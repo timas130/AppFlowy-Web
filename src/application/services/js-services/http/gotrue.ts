@@ -109,7 +109,7 @@ export async function signInWithMagicLink (email: string, authUrl: string) {
     },
     {
       headers: {
-        Redirect_to: authUrl,
+        "x-redirect-to": authUrl,
       },
     },
   );
