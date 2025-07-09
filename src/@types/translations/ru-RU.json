@@ -2179,6 +2179,7 @@
     "continueWithGoogle": "Продолжить с Google",
     "continueWithGithub": "Продолжить с GitHub",
     "continueWithDiscord": "Продолжить с Discord",
+    "continueWithKeycloak": "Продолжить с YunoHost",
     "signInAgreement": "Нажимая «Продолжить» выше, вы подтверждаете, что\nвы прочитали, поняли и согласились с\nAppFlowy",
     "and": "и",
     "termOfUse": "Условия",

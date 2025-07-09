@@ -2678,6 +2678,7 @@
     "continueWithGithub": "Continue with GitHub",
     "continueWithDiscord": "Continue with Discord",
     "continueWithApple": "Continue with Apple ",
+    "continueWithKeycloak": "Continue with YunoHost",
     "moreOptions": "More options",
     "collapse": "Collapse",
     "signInAgreement": "By clicking \"Continue\" above, you agreed to AppFlowy's",
