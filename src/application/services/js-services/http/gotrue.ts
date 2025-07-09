@@ -106,11 +106,7 @@ export async function signInWithMagicLink (email: string, authUrl: string) {
       code_challenge_method: '',
       data: {},
       email,
-    },
-    {
-      headers: {
-        Redirect_to: authUrl,
-      },
+      redirect_to: authUrl,
     },
   );
 
