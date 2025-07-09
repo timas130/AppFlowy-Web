@@ -160,3 +160,12 @@ export function signInDiscord (authUrl: string) {
 
   window.open(url, '_current');
 }
+
+export function signInKeycloak (authUrl: string) {
+  const provider = 'keycloak';
+  const redirectTo = encodeURIComponent(authUrl);
+  const baseURL = axiosInstance?.defaults.baseURL;
+  const url = `${baseURL}/authorize?provider=${provider}&redirect_to=${redirectTo}`;
+
+  window.open(url, '_current');
+}

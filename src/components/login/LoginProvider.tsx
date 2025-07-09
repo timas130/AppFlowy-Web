@@ -3,10 +3,7 @@ import { AFConfigContext } from '@/components/main/app.hooks';
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useCallback, useContext, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ReactComponent as GoogleSvg } from '@/assets/login/google.svg';
-import { ReactComponent as GithubSvg } from '@/assets/login/github.svg';
-import { ReactComponent as DiscordSvg } from '@/assets/login/discord.svg';
-import { ReactComponent as AppleSvg } from '@/assets/login/apple.svg';
+import { ReactComponent as KeycloakSvg } from '@/assets/login/keycloak.svg';
 import { Button } from '@/components/ui/button';
 
 const moreOptionsVariants = {
@@ -36,24 +33,9 @@ function LoginProvider ({ redirectTo }: { redirectTo: string }) {
   const options = useMemo(
     () => [
       {
-        label: t('web.continueWithGoogle'),
-        Icon: GoogleSvg,
-        value: 'google',
-      },
-      {
-        label: t('web.continueWithApple'),
-        Icon: AppleSvg,
-        value: 'apple',
-      },
-      {
-        label: t('web.continueWithGithub'),
-        value: 'github',
-        Icon: GithubSvg,
-      },
-      {
-        label: t('web.continueWithDiscord'),
-        value: 'discord',
-        Icon: DiscordSvg,
+        label: t('web.continueWithKeycloak'),
+        value: 'keycloak',
+        Icon: KeycloakSvg,
       },
     ],
     [t],
@@ -63,17 +45,8 @@ function LoginProvider ({ redirectTo }: { redirectTo: string }) {
   const handleClick = useCallback(async (option: string) => {
     try {
       switch (option) {
-        case 'google':
-          await service?.signInGoogle({ redirectTo });
-          break;
-        case 'apple':
-          await service?.signInApple({ redirectTo });
-          break;
-        case 'github':
-          await service?.signInGithub({ redirectTo });
-          break;
-        case 'discord':
-          await service?.signInDiscord({ redirectTo });
+        case 'keycloak':
+          await service?.signInKeycloak({ redirectTo });
           break;
       }
     } catch (e) {

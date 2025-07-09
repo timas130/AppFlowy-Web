@@ -320,6 +320,11 @@ export class AFClientService implements AFService {
     return APIService.signInDiscord(AUTH_CALLBACK_URL);
   }
 
+  @withSignIn()
+  async signInKeycloak(_: { redirectTo: string }) {
+    return APIService.signInKeycloak(AUTH_CALLBACK_URL);
+  }
+
   async getWorkspaces() {
     const data = APIService.getWorkspaces();
 
